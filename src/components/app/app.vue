@@ -1,10 +1,10 @@
 <template>
-   <v-app dark>
-      <v-navigation-drawer app permanent v-if="$vuetify.breakpoint.lgAndUp" class="grey darken-4">
+   <v-app >
+      <v-navigation-drawer app permanent v-if="$vuetify.breakpoint.lgAndUp">
          <NavMenu></NavMenu>
       </v-navigation-drawer>
       <div v-else>
-         <v-navigation-drawer app v-model="drawer" class="grey darken-4">
+         <v-navigation-drawer app v-model="drawer">
             <NavMenu></NavMenu>
          </v-navigation-drawer>
          <v-toolbar flat fixed scroll-off-screen>

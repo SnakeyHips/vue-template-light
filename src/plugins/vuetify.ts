@@ -6,7 +6,7 @@ import colors from 'vuetify/es5/util/colors';
 Vue.use(Vuetify, {
   iconfont: 'md',
   theme: {
-    primary: colors.amber,
-    accent: colors.amber.accent1
+    primary: colors.lightBlue,
+    accent: colors.lightBlue.accent1
   }
 })

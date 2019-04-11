@@ -3,7 +3,7 @@
       <v-flex xs12>
          <v-img :src="require('@/assets/photo3.jpg')" height="100vh" transition="null">
             <v-layout column text-xs-right justify-end fill-height pa-5 v-if="$vuetify.breakpoint.mdAndUp">
-               <span class="text-uppercase display-3">
+               <span class="text-uppercase display-3" style="color: white;">
                Business Name
                </span>
                <h1 class="primary--text text-uppercase display-4">
@@ -11,7 +11,7 @@
                </h1>
             </v-layout>
             <v-layout column text-xs-right justify-end fill-height pa-3 v-else>
-               <span class="text-uppercase display-1">
+               <span class="text-uppercase display-1" style="color: white;">
                Business Name
                </span>
                <h1 class="primary--text text-uppercase display-2">
