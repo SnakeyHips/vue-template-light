@@ -1,18 +1,24 @@
 <template>
    <v-layout column>
       <v-flex xs12>
-         <v-img :src="require('@/assets/photo5.jpg')" height="100vh">
-            <v-layout column text-xs-right justify-end fill-height pa-5 v-if="$vuetify.breakpoint.mdAndUp">
-               <h1 class="primary--text text-uppercase display-4">
-                  Services
-               </h1>
-            </v-layout>
-            <v-layout column text-xs-right justify-end fill-height pa-3 v-else>
-               <h1 class="primary--text text-uppercase display-2">
-                  Services
-               </h1>
-            </v-layout>
-         </v-img>
+         <div v-if="$vuetify.breakpoint.mdAndUp">
+            <v-img :src="require('@/assets/photo5.jpg')" height="100vh">
+               <v-layout column text-xs-right justify-end fill-height pa-5 >
+                  <h1 class="primary--text text-uppercase display-4">
+                     Services
+                  </h1>
+               </v-layout>
+            </v-img>
+         </div>
+         <div v-else>
+            <v-img :src="require('@/assets/photo5.jpg')" style="height: calc(100vh - 56px);">
+               <v-layout column text-xs-right justify-end fill-height pa-3>
+                  <h1 class="primary--text text-uppercase display-2">
+                     Services
+                  </h1>
+               </v-layout>
+            </v-img>
+         </div>
       </v-flex>
       <v-container container pa-5 fluid>
          <v-layout row wrap justify-space-around>
@@ -74,7 +80,7 @@
             </v-flex>
             <v-flex lg5 xs12>
                <h2 class="primary--text title font-weight-light text-uppercase mb-3">Calender</h2>
-               <v-calendar color="primary" style="padding-bottom: 120px;"></v-calendar>
+               <v-calendar color="primary" style="padding-bottom: 120px; background-color: transparent"></v-calendar>
             </v-flex>
          </v-layout>
          <v-layout justify-center>

@@ -1,24 +1,30 @@
 <template>
    <v-layout column>
       <v-flex xs12>
-         <v-img :src="require('@/assets/photo3.jpg')" height="100vh" transition="null">
-            <v-layout column text-xs-right justify-end fill-height pa-5 v-if="$vuetify.breakpoint.mdAndUp">
-               <span class="text-uppercase display-3" style="color: white;">
-               Business Name
-               </span>
-               <h1 class="primary--text text-uppercase display-4">
-                  Business One Liner
-               </h1>
-            </v-layout>
-            <v-layout column text-xs-right justify-end fill-height pa-3 v-else>
-               <span class="text-uppercase display-1" style="color: white;">
-               Business Name
-               </span>
-               <h1 class="primary--text text-uppercase display-2">
-                  Business One Liner
-               </h1>
-            </v-layout>
-         </v-img>
+         <div v-if="$vuetify.breakpoint.mdAndUp">
+            <v-img :src="require('@/assets/photo3.jpg')" height="100vh">
+               <v-layout column text-xs-right justify-end fill-height pa-5>
+                  <span class="text-uppercase display-3" style="color: white;">
+                     Business Name
+                  </span>
+                  <h1 class="primary--text text-uppercase display-4">
+                     Business One Liner
+                  </h1>
+               </v-layout>
+            </v-img>
+         </div>
+         <div v-else>
+            <v-img :src="require('@/assets/photo3.jpg')" style="height: calc(100vh - 56px);">
+               <v-layout column text-xs-right justify-end fill-height pa-3>
+                  <span class="text-uppercase display-1" style="color: white;">
+                  Business Name
+                  </span>
+                  <h1 class="primary--text text-uppercase display-2">
+                     Business One Liner
+                  </h1>
+               </v-layout>
+            </v-img>
+         </div>
       </v-flex>
       <v-container container pa-5 fluid>
          <v-layout row wrap justify-space-around>
@@ -33,12 +39,12 @@
             </v-flex>
             <v-flex xs3 ml-3 v-if="$vuetify.breakpoint.mdAndUp" mt-4 mb-4>
                <v-layout fill-height>
-                  <v-img :src="require('@/assets/photo2.jpg')" style="border-radius: 5px;" max-height="400"></v-img>
+                  <v-img :src="require('@/assets/photo2.jpg')" class="round-corners" max-height="400"></v-img>
                </v-layout>
             </v-flex>
             <v-flex xs3 ml-3 v-if="$vuetify.breakpoint.mdAndUp" mt-4 mb-4>
                <v-layout fill-height>
-                  <v-img :src="require('@/assets/photo7.jpg')" style="border-radius: 5px;" max-height="400"></v-img>
+                  <v-img :src="require('@/assets/photo7.jpg')" class="round-corners" max-height="400"></v-img>
                </v-layout>
             </v-flex>
             <v-flex md8 xs12 mb-4>

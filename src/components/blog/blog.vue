@@ -1,18 +1,24 @@
 <template>
    <v-layout column>
       <v-flex xs12>
-         <v-img :src="require('@/assets/photo4.jpg')" height="100vh">
-            <v-layout column text-xs-right justify-end fill-height pa-5 v-if="$vuetify.breakpoint.mdAndUp">
-               <h1 class="primary--text text-uppercase display-4">
-                  Blog
-               </h1>
-            </v-layout>
-            <v-layout column text-xs-right justify-end fill-height pa-3 v-else>
-               <h1 class="primary--text text-uppercase display-2">
-                  Blog
-               </h1>
-            </v-layout>
-         </v-img>
+         <div v-if="$vuetify.breakpoint.mdAndUp">
+            <v-img :src="require('@/assets/photo4.jpg')" height="100vh">
+               <v-layout column text-xs-right justify-end fill-height pa-5 >
+                  <h1 class="primary--text text-uppercase display-4">
+                     Blog
+                  </h1>
+               </v-layout>
+            </v-img>
+         </div>
+         <div v-else>
+            <v-img :src="require('@/assets/photo4.jpg')" style="height: calc(100vh - 56px);">
+               <v-layout column text-xs-right justify-end fill-height pa-3>
+                  <h1 class="primary--text text-uppercase display-2">
+                     Blog
+                  </h1>
+               </v-layout>
+            </v-img>
+         </div>
       </v-flex>
       <v-container container fluid pa-0>
          <v-tabs grow slider-color="primary">
@@ -68,7 +74,7 @@
                </v-card>
             </v-tab-item>
          </v-tabs>
-         <v-layout justify-center mb-4>
+         <v-layout justify-center mb-5>
             <v-btn flat color="primary" to="/">Home</v-btn>
          </v-layout>
       </v-container>
