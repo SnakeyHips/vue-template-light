@@ -11,7 +11,7 @@
             </v-img>
          </div>
          <div v-else>
-            <v-img :src="require('@/assets/photo4.jpg')" style="height: calc(100vh - 56px);">
+            <v-img :src="require('@/assets/photo4.jpg')" style="height: calc(100vh - 112px);">
                <v-layout column text-xs-right justify-end fill-height pa-3>
                   <h1 class="primary--text text-uppercase display-2">
                      Blog

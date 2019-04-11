@@ -1,7 +1,7 @@
 <template>
    <v-app>
       <div v-if="$vuetify.breakpoint.mdAndDown">
-         <v-toolbar flat fixed class="white">
+         <v-toolbar flat fixed scroll-off-screen class="white">
             <v-layout justify-center>
                <span class="primary--text title">Business Name</span>
             </v-layout>
