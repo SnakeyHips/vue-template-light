@@ -1,19 +1,14 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { MenuItem } from '@/models/menu_item';
-import NavMenu from '@/components/navmenu/navmenu';
 
-@Component ({
-  components: {
-		NavMenu,
-	}
-})
+@Component
 export default class AppComponent extends Vue {
-  drawer: boolean = false;
+  bottomNav: string = 'home';
 
   menuItems: MenuItem[] = [
-      new MenuItem('Home', '/'),
-      new MenuItem('Training & Nutrition', '/training'),
-      new MenuItem('Specialist', '/specialist'),
-      new MenuItem('Blog', '/blog')
-    ];
+    new MenuItem('Home','home', '/'),
+    new MenuItem('Services','pages', '/services'),
+    new MenuItem('Biography','person', '/biography'),
+    new MenuItem('Blog','portrait', '/blog')
+  ]
 }
