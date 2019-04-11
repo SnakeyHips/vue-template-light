@@ -14,7 +14,7 @@
             </v-img>
          </div>
          <div v-else>
-            <v-img :src="require('@/assets/photo3.jpg')" style="height: calc(100vh - 112px);">
+            <v-img :src="require('@/assets/photo3.jpg')" style="height: calc(100vh - 56px);">
                <v-layout column text-xs-right justify-end fill-height pa-3>
                   <span class="text-uppercase display-1" style="color: white;">
                   Business Name
