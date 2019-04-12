@@ -69,7 +69,7 @@
                </div>
             </v-flex>
          </v-layout>
-         <v-layout justify-center>
+         <v-layout justify-center mb-5>
             <v-btn flat color="primary" to="/">Home</v-btn>
          </v-layout>
       </v-container>

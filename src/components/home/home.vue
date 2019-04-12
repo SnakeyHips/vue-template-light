@@ -89,7 +89,7 @@
                   </v-layout>
                </v-form>
             </v-flex>
-            <v-flex md3 xs12>
+            <v-flex md3 xs12 mb-5>
                <v-layout align-center justify-center fill-height>
                   <v-list style="background: transparent;">
                      <v-list-tile avatar three-line>

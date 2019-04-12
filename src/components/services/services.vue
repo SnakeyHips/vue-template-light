@@ -72,7 +72,7 @@
                <v-calendar color="primary" style="padding-bottom: 120px; background-color: transparent"></v-calendar>
             </v-flex>
          </v-layout>
-         <v-layout justify-center mb-4>
+         <v-layout justify-center mb-5>
             <v-btn flat color="primary" to="/">Home</v-btn>
          </v-layout>
       </v-container>
