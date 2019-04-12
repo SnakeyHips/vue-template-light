@@ -1,31 +1,20 @@
 <template>
    <v-layout column>
       <v-flex xs12>
-         <div v-if="$vuetify.breakpoint.mdAndUp">
-            <v-img :src="require('@/assets/photo5.jpg')" height="100vh">
-               <v-layout column text-xs-right justify-end fill-height pa-5 >
-                  <h1 class="primary--text text-uppercase display-4">
-                     Services
-                  </h1>
-               </v-layout>
-            </v-img>
-         </div>
-         <div v-else>
-            <v-img :src="require('@/assets/photo5.jpg')" style="height: calc(100vh - 56px);">
-               <v-layout column text-xs-right justify-end fill-height pa-3>
-                  <h1 class="primary--text text-uppercase display-2">
-                     Services
-                  </h1>
-               </v-layout>
-            </v-img>
-         </div>
+         <v-img :src="require('@/assets/photo5.jpg')" class="header-image">
+            <v-layout column text-xs-right justify-end fill-height class="header-padding">
+               <h1 class="header-text primary--text">
+                  Services
+               </h1>
+            </v-layout>
+         </v-img>
       </v-flex>
-      <v-container container pa-5 fluid>
-         <v-layout row wrap justify-space-around>
+      <v-container fluid class="content-container">
+         <v-layout row wrap justify-space-between>
             <v-flex xs12>
-               <h2 class="display-2 font-weight-bold primary--text mb-4">Our Services</h2>
+               <h2 class="content-title primary--text mb-4">Our Services</h2>
             </v-flex>
-            <v-flex md5 xs12 v-for="(service, i) in services" :key="i" pb-4>
+            <v-flex md5 xs12 v-for="(service, i) in services" :key="i" class="mb-4">
                <v-card>
                   <v-img :src="require('@/assets/' + service.image)" height="400">
                   </v-img>
@@ -44,7 +33,7 @@
                </v-card>
             </v-flex>
             <v-flex xs12 mt-4>
-               <h2 class="display-2 font-weight-bold primary--text mb-4">Purchase</h2>
+               <h2 class="content-title primary--text mb-4">Purchase</h2>
             </v-flex>
             <v-flex md5 xs12 mb-4>
                <h2 class="primary--text title font-weight-light text-uppercase mb-3">Select a service to book</h2>
@@ -79,11 +68,11 @@
                </v-form>
             </v-flex>
             <v-flex lg5 xs12>
-               <h2 class="primary--text title font-weight-light text-uppercase mb-3">Calender</h2>
+               <h2 class="content-title primary--text title mb-3">Calender</h2>
                <v-calendar color="primary" style="padding-bottom: 120px; background-color: transparent"></v-calendar>
             </v-flex>
          </v-layout>
-         <v-layout justify-center>
+         <v-layout justify-center mb-4>
             <v-btn flat color="primary" to="/">Home</v-btn>
          </v-layout>
       </v-container>

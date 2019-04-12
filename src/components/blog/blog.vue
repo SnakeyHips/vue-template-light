@@ -1,33 +1,22 @@
 <template>
    <v-layout column>
       <v-flex xs12>
-         <div v-if="$vuetify.breakpoint.mdAndUp">
-            <v-img :src="require('@/assets/photo4.jpg')" height="100vh">
-               <v-layout column text-xs-right justify-end fill-height pa-5 >
-                  <h1 class="primary--text text-uppercase display-4">
-                     Blog
-                  </h1>
-               </v-layout>
-            </v-img>
-         </div>
-         <div v-else>
-            <v-img :src="require('@/assets/photo4.jpg')" style="height: calc(100vh - 56px);">
-               <v-layout column text-xs-right justify-end fill-height pa-3>
-                  <h1 class="primary--text text-uppercase display-2">
-                     Blog
-                  </h1>
-               </v-layout>
-            </v-img>
-         </div>
+         <v-img :src="require('@/assets/photo4.jpg')" class="header-image">
+            <v-layout column text-xs-right justify-end fill-height class="header-padding">
+               <h1 class="header-text primary--text">
+                  Blog
+               </h1>
+            </v-layout>
+         </v-img>
       </v-flex>
-      <v-container container fluid pa-0>
+      <v-container fluid pa-0>
          <v-tabs grow slider-color="primary">
             <v-tab ripple>
                Blog One
             </v-tab>
             <v-tab-item>
-               <v-card flat color="transparent" class="pa-5">
-                  <v-card-title class="headline primary--text">Blog One Title</v-card-title>
+               <v-card flat color="transparent" class="content-container">
+                  <v-card-title class="content-title primary--text">Blog One Title</v-card-title>
                   <v-layout column>
                      <v-sparkline :value="values1" :gradient="gradient" stroke-linecap="round" line-width="2" smooth padding="2"></v-sparkline>
                      <v-card-text>
@@ -43,8 +32,8 @@
                Blog Two
             </v-tab>
             <v-tab-item>
-               <v-card flat color="transparent" class="pa-5">
-                  <v-card-title class="headline primary--text">Blog Two Title</v-card-title>
+               <v-card flat color="transparent" class="content-container">
+                  <v-card-title class="content-title primary--text">Blog Two Title</v-card-title>
                   <v-layout column>
                      <v-sparkline :value="values2" :gradient="gradient" gradient-direction="left" stroke-linecap="round" line-width="2" smooth padding="2"></v-sparkline>
                      <v-card-text>
@@ -60,8 +49,8 @@
                Blog Three
             </v-tab>
             <v-tab-item>
-               <v-card flat color="transparent" class="pa-5">
-                  <v-card-title class="headline primary--text">Blog Three Title</v-card-title>
+               <v-card flat color="transparent" class="content-container">
+                  <v-card-title class="content-title primary--text">Blog Three Title</v-card-title>
                   <v-layout column>
                      <v-sparkline :value="values3" :gradient="gradient" gradient-direction="right" stroke-linecap="round" line-width="2" smooth padding="2"></v-sparkline>
                      <v-card-text>

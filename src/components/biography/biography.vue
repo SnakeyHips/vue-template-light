@@ -1,32 +1,21 @@
 <template>
    <v-layout column>
       <v-flex xs12>
-         <div v-if="$vuetify.breakpoint.mdAndUp">
-            <v-img :src="require('@/assets/photo1.jpg')" height="100vh">
-               <v-layout column text-xs-right justify-end fill-height pa-5 >
-                  <h1 class="primary--text text-uppercase display-4">
-                     Biography
-                  </h1>
-               </v-layout>
-            </v-img>
-         </div>
-         <div v-else>
-            <v-img :src="require('@/assets/photo1.jpg')" style="height: calc(100vh - 56px);">
-               <v-layout column text-xs-right justify-end fill-height pa-3>
-                  <h1 class="primary--text text-uppercase display-2">
-                     Biography
-                  </h1>
-               </v-layout>
-            </v-img>
-         </div>
+         <v-img :src="require('@/assets/photo1.jpg')" class="header-image">
+            <v-layout column text-xs-right justify-end fill-height class="header-padding">
+               <h1 class="header-text primary--text">
+                  Biography
+               </h1>
+            </v-layout>
+         </v-img>
       </v-flex>
-      <v-container container pa-5 fluid>
-         <v-layout row wrap justify-space-around>
+      <v-container fluid class="content-container">
+         <v-layout row wrap justify-space-between>
             <v-flex xs12>
-               <h2 class="display-2 font-weight-bold primary--text mb-4">Who Am I</h2>
+               <h2 class="content-title primary--text mb-4">Who Am I</h2>
             </v-flex>
             <v-flex md3 xs12 mb-4>
-               <v-img :src="require('@/assets/photo6.jpg')" class="round-corners"></v-img>
+               <v-img :src="require('@/assets/photo6.jpg')" class="content-image"></v-img>
             </v-flex>
             <v-flex md8 xs12 mb-4>
                <p>&nbsp; &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -41,7 +30,7 @@
                </v-layout>
             </v-flex>
             <v-flex xs12 mb-4>
-               <h2 class="display-2 font-weight-bold primary--text mb-4">My Journey</h2>
+               <h2 class="content-title primary--text mb-4">My Journey</h2>
                <v-timeline :dense="useDense()">
                   <v-timeline-item v-for="(event, i) in events" :key="`event-${i}`" color="primary" large>
                      <template v-slot:opposite>
@@ -61,7 +50,7 @@
                </v-timeline>
             </v-flex>
             <v-flex xs12>
-               <h2 class="display-2 font-weight-bold primary--text mb-4">My Skills</h2>
+               <h2 class="content-title primary--text mb-4">My Skills</h2>
             </v-flex>
             <v-flex md5 xs12 mb-4>
                <p>&nbsp; &nbsp; &nbsp; &nbsp; Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
